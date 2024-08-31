@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    background-color: black;
+    height: 100px;
+    display: flex;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    height: 100%;
+    width: 80px;
+    object-fit: cover;
+    background-color: white;
+}
+.text_content{
+    display: flex;
+    gap: 20px;
+}
+#checkbox{
+    display: none;
+}
+.ham{
+    display: none;
+}
+
+@media screen and (max-width: 630px) {
+    
+    .text_content{
+        display: none;
+    }
+    .ham{
+        display: block;
+    }
+    #checkbox:checked ~ .text_content{
+        display: flex;
+        transition: 1.0s ease;
+        position: absolute;
+        width: 100%;
+        margin-top: 120px;
+        color: red;
+        background-color: yellow;
+        justify-content: space-evenly;
+    }
+    
+}
